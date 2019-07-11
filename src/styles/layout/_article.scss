@@ -43,7 +43,7 @@
     }
     &-date {
       margin-bottom: 200px;
-      font-family: $font-family-headings;
+      font-family: $font-family-regular;
       font-weight: 200;
 
       @include media-breakpoint-down(sm) {
