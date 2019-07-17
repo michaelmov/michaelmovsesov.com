@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { DiscussionEmbed } from 'disqus-react';
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar_small.jpg';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Article = ({ data }) => {
   const article = data.markdownRemark;
@@ -48,12 +50,12 @@ const Article = ({ data }) => {
       <main className="article__main">
         <div className="container-fluid">
           <div className="article__content bg-white px-4 pt-12">
-            <Link to="/">
+            <AniLink swipe to="/">
               <div
                 className="article__author-avatar"
                 style={{ backgroundImage: `url(${avatarImage})` }}
               />
-            </Link>
+            </AniLink>
             <article
               id="article-wrapper"
               dangerouslySetInnerHTML={{ __html: article.html }}

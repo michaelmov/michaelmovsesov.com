@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const ArticleLink = ({ children, link, isExternal }) => {
   if (isExternal) {
@@ -10,7 +10,11 @@ const ArticleLink = ({ children, link, isExternal }) => {
       </a>
     );
   } else {
-    return <Link to={link}>{children}</Link>;
+    return (
+      <AniLink swipe direction="left" to={link}>
+        {children}
+      </AniLink>
+    );
   }
 };
 const ArticleCard = ({ title, excerpt, path, isExternal, iconClass }) => {

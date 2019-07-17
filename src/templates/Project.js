@@ -1,8 +1,9 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Project = ({ data }) => {
   const project = data.markdownRemark;
@@ -49,7 +50,9 @@ const Project = ({ data }) => {
           <div className="article__content bg-white px-4 py-8">
             <article id="article-wrapper">
               <p>
-                <Link to="/projects">Back to Projects</Link>
+                <AniLink swipe direction="right" to="/projects">
+                  Back to Projects
+                </AniLink>
               </p>
               <h5 className="mb-2">Client</h5>
               <p>
@@ -64,7 +67,9 @@ const Project = ({ data }) => {
                 dangerouslySetInnerHTML={{ __html: project.html }}
               />
               <p>
-                <Link to="/projects">Back to Projects</Link>
+                <AniLink swipe to="/projects">
+                  Back to Projects
+                </AniLink>
               </p>
             </article>
           </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { Link } from 'gatsby';
 import Img from 'gatsby-image';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar_small.jpg';
 
@@ -19,7 +19,8 @@ const Projects = ({ data }) => {
         <h2 className="projects__hero-subtitle h6 text-uppercase mb-2">
           {siteMetadata.description}
         </h2>
-        <Link
+        <AniLink
+          swipe
           to="/"
           className="projects__hero-avatar"
           style={{ backgroundImage: `url(${avatarImage})` }}
@@ -87,7 +88,9 @@ const Projects = ({ data }) => {
                 const isEven = index % 2 === 1;
                 return (
                   <div key={project.node.id} className="col-12 mb-4">
-                    <Link
+                    <AniLink
+                      swipe
+                      direction="left"
                       to={project.node.frontmatter.path}
                       className="article-card"
                     >
@@ -126,7 +129,7 @@ const Projects = ({ data }) => {
                           />
                         </div>
                       </article>
-                    </Link>
+                    </AniLink>
                   </div>
                 );
               })}
