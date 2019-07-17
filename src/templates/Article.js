@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import { DiscussionEmbed } from 'disqus-react';
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar_small.jpg';
 
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
