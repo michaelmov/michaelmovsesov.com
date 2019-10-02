@@ -19,6 +19,10 @@ const Article = ({ data }) => {
     title: article.frontmatter.title,
   };
 
+  useEffect(() => {
+    initTitleParallax();
+  }, []);
+
   const initTitleParallax = () => {
     const articleHeroSection = document.querySelector('.article__hero');
     const articleHeroText = document.querySelector('.article__hero-text ');
@@ -42,10 +46,6 @@ const Article = ({ data }) => {
       }
     });
   };
-
-  useEffect(() => {
-    initTitleParallax();
-  }, []);
 
   if (article.frontmatter.hero_image) {
     heroImage = (
