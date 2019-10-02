@@ -66,7 +66,7 @@ const Article = ({ data }) => {
         {heroImage}
         <div className="container-fluid" style={{ zIndex: 1 }}>
           <div className="row">
-            <div className="col-12 article__hero-text">
+            <div className="col-12 article__hero-text ">
               <h1 className="h2 text-center article__hero-title mb-4">
                 {article.frontmatter.title}
               </h1>
