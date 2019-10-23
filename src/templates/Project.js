@@ -50,7 +50,7 @@ const Project = ({ data }) => {
           <div className="article__content bg-white px-4 py-8">
             <article id="article-wrapper">
               <p>
-                <AniLink swipe direction="right" to="/projects">
+                <AniLink fade duration={0.2} to="/projects">
                   Back to Projects
                 </AniLink>
               </p>
@@ -67,7 +67,7 @@ const Project = ({ data }) => {
                 dangerouslySetInnerHTML={{ __html: project.html }}
               />
               <p>
-                <AniLink swipe to="/projects">
+                <AniLink fade duration={0.2} to="/projects">
                   Back to Projects
                 </AniLink>
               </p>

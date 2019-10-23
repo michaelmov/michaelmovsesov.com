@@ -11,17 +11,18 @@ const ArticleLink = ({ children, link, isExternal }) => {
     );
   } else {
     return (
-      <AniLink swipe direction="left" to={link}>
+      <AniLink fade to={link} duration={0.2}>
         {children}
       </AniLink>
     );
   }
 };
-const ArticleCard = ({ title, excerpt, path, isExternal, iconClass }) => {
+const ArticleCard = ({ title, excerpt, path, isExternal, iconClass, border }) => {
+  const borderClass = border ? 'article-card--border' : '';
   return (
-    <article className="article-card ml-4">
+    <article className={`article-card ml-4 ${borderClass}`}>
       <ArticleLink isExternal={isExternal} link={path}>
-        <div className="bg-white pl-6 pr-4 py-4">
+        <div className="bg-white pl-6 pr-4 pt-6 pb-4 pt-md-5 pb-md-4">
           <div className="article-card__icon text-white d-flex justify-content-center align-items-center">
             <i className={iconClass || 'far fa-newspaper'} />
           </div>
@@ -39,6 +40,7 @@ ArticleCard.propTypes = {
   path: PropTypes.string,
   isExternal: PropTypes.bool,
   iconClass: PropTypes.string,
+  border: PropTypes.bool
 };
 
 ArticleCard.defaultProps = {
@@ -47,6 +49,7 @@ ArticleCard.defaultProps = {
   path: '/',
   isExternal: true,
   iconClass: 'far fa-newspaper',
+  border: true
 };
 
 export default ArticleCard;

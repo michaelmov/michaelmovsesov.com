@@ -31,7 +31,7 @@ const IndexPage = ({ data, location }) => {
               return (
                 <div
                   key={article.node.id}
-                  className="col-md-12 home__article-wrapper mb-4"
+                  className="col-md-12 home__article-wrapper mb-6"
                 >
                   <ArticleCard
                     title={article.node.frontmatter.title}

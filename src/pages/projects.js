@@ -20,7 +20,8 @@ const Projects = ({ data }) => {
           {siteMetadata.description}
         </h2>
         <AniLink
-          swipe
+          fade
+          duration={0.2}
           to="/"
           className="projects__hero-avatar"
           style={{ backgroundImage: `url(${avatarImage})` }}
@@ -89,8 +90,8 @@ const Projects = ({ data }) => {
                 return (
                   <div key={project.node.id} className="col-12 mb-4">
                     <AniLink
-                      swipe
-                      direction="left"
+                      fade
+                      duration={0.2}
                       to={project.node.frontmatter.path}
                       className="article-card"
                     >

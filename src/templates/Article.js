@@ -81,7 +81,7 @@ const Article = ({ data }) => {
       <main className="article__main">
         <div className="container-fluid">
           <div className="article__content bg-white px-4 pt-12">
-            <AniLink swipe to="/">
+            <AniLink fade duration={0.2} to="/">
               <div
                 className="article__author-avatar"
                 style={{ backgroundImage: `url(${avatarImage})` }}
