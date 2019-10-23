@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Project = ({ data }) => {
@@ -12,7 +12,7 @@ const Project = ({ data }) => {
   
   if (project.frontmatter.hero_image) {
     heroImage = (
-      <Img
+      <BackgroundImage
         className="article__hero-image"
         fluid={project.frontmatter.hero_image.childImageSharp.fluid}
         objectFit="cover"

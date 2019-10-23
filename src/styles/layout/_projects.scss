@@ -24,6 +24,12 @@
 
   &__main-section-title {
     @extend .home__main-section-title !optional;
+
+    h3 {
+      &:after {
+        left: 115px;
+      }
+    }
   }
 
   &__about {
