@@ -112,6 +112,7 @@
   &__hero {
     .article__hero-text {
       transform: translateY(-70px);
+      z-index: 1;
     }
   }
   &__main {

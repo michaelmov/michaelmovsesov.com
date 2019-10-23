@@ -8,9 +8,9 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 const Project = ({ data }) => {
   const project = data.markdownRemark;
   let heroImage;
-  console.log(project);
+  let heroOverlayClass = '';
+  
   if (project.frontmatter.hero_image) {
-    // console.log('hello');
     heroImage = (
       <Img
         className="article__hero-image"
@@ -19,11 +19,13 @@ const Project = ({ data }) => {
         objectPosition="50% 50%"
       />
     );
+
+    heroOverlayClass = 'article__hero-bg-overlay';
   }
   return (
     <Layout>
       <SEO title="Projects" />
-      <header className="project__hero article__hero d-flex align-items-center justify-content-center text-white">
+      <header className={`project__hero article__hero d-flex align-items-center justify-content-center text-white ${heroOverlayClass}`}>
         {heroImage}
         <div className="container-fluid">
           <div className="row">

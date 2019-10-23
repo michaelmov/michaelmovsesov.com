@@ -13,6 +13,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 const Article = ({ data }) => {
   const article = data.markdownRemark;
   let heroImage;
+  let heroOverlayClass = '';
   const disqusShortname = 'michaelmovsesov';
   const disqusConfig = {
     identifier: article.id,
@@ -54,14 +55,14 @@ const Article = ({ data }) => {
         fluid={article.frontmatter.hero_image.childImageSharp.fluid}
       />
     );
+
+    heroOverlayClass = 'article__hero-bg-overlay';
   }
   return (
     <Layout>
       <SEO title={article.frontmatter.title} />
       <header
-        className={`article__hero d-flex align-items-center justify-content-center text-white ${
-          heroImage ? 'article__hero-bg-overlay' : ''
-        }`}
+        className={`article__hero d-flex align-items-center justify-content-center text-white  ${heroOverlayClass}`}
       >
         {heroImage}
         <div className="container-fluid" style={{ zIndex: 1 }}>
