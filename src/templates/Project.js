@@ -15,8 +15,6 @@ const Project = ({ data }) => {
       <BackgroundImage
         className="article__hero-image"
         fluid={project.frontmatter.hero_image.childImageSharp.fluid}
-        objectFit="cover"
-        objectPosition="50% 50%"
       />
     );
 

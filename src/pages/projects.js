@@ -31,7 +31,7 @@ const Projects = ({ data }) => {
         <section className="mt-8 projects__about">
           <div className="container-fluid">
             <div className="projects__main-section-title col-md-12 mb-4 pl-0">
-              <h3 className="h6 text-muted">Hello <span className="pl-1" style={{fontSize: '1.5rem'}}>👋</span></h3>
+              <h3 className="h6 text-muted">Hello <span className="pl-1" role="img" aria-label="hello" style={{fontSize: '1.5rem'}}>👋</span></h3>
             </div>
             <div className="projects__about-card">
               <div className="row">

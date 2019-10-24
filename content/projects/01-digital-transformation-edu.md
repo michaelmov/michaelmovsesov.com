@@ -17,10 +17,10 @@ As part of Microsoft's Global Engagement Program campaign, our team at Indigo Sl
 ![Digital Transformation in Education](../assets/img/gep-edu-1.jpg "Digital Transformation in Education")
 
 ##### My Role
-I worked closely with stakeholders at Microsoft and a designer to prototype interactions and eventually build out the production site UI.
+I worked closely with stakeholders at Microsoft and a designer to prototype interactions and eventually build out the production site using Vue.js framework.
 
 ![Digital Transformation in Education](../assets/img/gep-edu-2.jpg "Digital Transformation in Education")
 ![Digital Transformation in Education](../assets/img/gep-edu-3.jpg "Digital Transformation in Education")
 
 ##### Technologies
-HTML, SCSS, JavaScript, Vue.js
+JavaScript, Vue.js, HTML, SCSS, Bootstrap

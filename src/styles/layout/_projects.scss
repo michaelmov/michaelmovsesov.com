@@ -28,6 +28,10 @@
     h3 {
       &:after {
         left: 115px;
+
+        @include media-breakpoint-down(md) {
+          width: 50%;
+        }
       }
     }
   }

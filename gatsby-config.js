@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Michael Movsesov',
-    description: 'UX/UI ENGINEER | PROBLEM SOLVER',
+    description: 'FRONT END ENGINEER | PROBLEM SOLVER',
     author: 'Michael Movsesov',
   },
   plugins: [

@@ -26,6 +26,7 @@
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
 
     &-title {
@@ -172,7 +173,6 @@
       max-width: 100%;
       height: auto;
       display: block;
-      margin: $spacer * 6 auto;
     }
 
     @include media-breakpoint-down(sm) {
