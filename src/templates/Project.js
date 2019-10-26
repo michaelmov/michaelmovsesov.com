@@ -4,11 +4,40 @@ import SEO from '../components/seo';
 import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { useEffect, useState } from 'react';
 
 const Project = ({ data }) => {
   const project = data.markdownRemark;
   let heroImage;
   let heroOverlayClass = '';
+
+  const [heroTextStyles, setHeroTextStyles] = useState({
+    opacity: 1,
+    translateY: -30,
+  });
+
+  const initTitleParallax = () => {
+    const articleHeroSection = document.querySelector('.article__hero');
+    const heroHeight = articleHeroSection.clientHeight;
+
+    // Header parallax
+    window.addEventListener('scroll', e => {
+      const scroll = window.scrollY;
+
+      if (scroll <= heroHeight) {
+        setHeroTextStyles({
+          ...heroTextStyles,
+          opacity: heroTextStyles.opacity - scroll /300,
+          translateY: scroll / 3 - 30,
+        })
+      }
+    });
+  };
+
+  useEffect(() => {
+    initTitleParallax();
+  }, []);
+  
   
   if (project.frontmatter.hero_image) {
     heroImage = (
@@ -27,7 +56,12 @@ const Project = ({ data }) => {
         {heroImage}
         <div className="container-fluid">
           <div className="row">
-            <div className="col-12 article__hero-text d-flex flex-column align-items-center">
+            <div className="col-12 article__hero-text d-flex flex-column align-items-center"
+              style={{
+                opacity: heroTextStyles.opacity,
+                transform: `translateY(${heroTextStyles.translateY}%)`
+              }}
+            >
               <h1 className="h2 text-center article__hero-title mb-4">
                 {project.frontmatter.title}
               </h1>

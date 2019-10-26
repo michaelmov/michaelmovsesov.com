@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { DiscussionEmbed } from 'disqus-react';
@@ -14,19 +14,20 @@ const Article = ({ data }) => {
   const article = data.markdownRemark;
   let heroImage;
   let heroOverlayClass = '';
+
   const disqusShortname = 'michaelmovsesov';
   const disqusConfig = {
     identifier: article.id,
     title: article.frontmatter.title,
   };
 
-  useEffect(() => {
-    initTitleParallax();
-  }, []);
+  const [heroTextStyles, setHeroTextStyles] = useState({
+    opacity: 1,
+    translateY: 0,
+  })
 
   const initTitleParallax = () => {
     const articleHeroSection = document.querySelector('.article__hero');
-    const articleHeroText = document.querySelector('.article__hero-text ');
     const heroHeight = articleHeroSection.clientHeight;
 
     // Header parallax
@@ -34,8 +35,11 @@ const Article = ({ data }) => {
       const scroll = window.scrollY;
 
       if (scroll <= heroHeight) {
-        articleHeroText.style.transform = `translate(0px, ${scroll / 3.5}%)`;
-        articleHeroText.style.opacity = 1 - scroll / 250;
+        setHeroTextStyles({
+          ...heroTextStyles,
+          opacity: heroTextStyles.opacity - scroll / 250,
+          translateY: scroll / 3.5,
+        })
       }
     });
 
@@ -47,6 +51,12 @@ const Article = ({ data }) => {
       }
     });
   };
+
+
+  useEffect(() => {
+    initTitleParallax();
+  }, []);
+
 
   if (article.frontmatter.hero_image) {
     heroImage = (
@@ -67,7 +77,12 @@ const Article = ({ data }) => {
         {heroImage}
         <div className="container-fluid" style={{ zIndex: 1 }}>
           <div className="row">
-            <div className="col-12 article__hero-text">
+            <div className="col-12 article__hero-text" 
+              style={{
+                opacity: heroTextStyles.opacity,
+                transform: `translateY(${heroTextStyles.translateY}%)`
+              }}
+            >
               <h1 className="h2 text-center article__hero-title mb-4">
                 {article.frontmatter.title}
               </h1>
