@@ -139,4 +139,4 @@ That's it! As you see, it's very straightforward to create simple two-way data b
 
 Here's a [JSFiddle](https://jsfiddle.net/michaelmov/5zj353vr/):
 
-<iframe width="100%" height="500" src="//jsfiddle.net/michaelmov/5zj353vr/embedded/js,html,result/dark/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="500" src="//jsfiddle.net/michaelmov/5zj353vr/embedded/js,html,result/dark/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe
