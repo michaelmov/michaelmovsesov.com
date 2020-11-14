@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
 
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar_small.jpg';
 
@@ -19,9 +19,7 @@ const Projects = ({ data }) => {
         <h2 className="projects__hero-subtitle h6 text-uppercase mb-2">
           {siteMetadata.description}
         </h2>
-        <AniLink
-          fade
-          duration={0.2}
+        <Link
           to="/"
           className="projects__hero-avatar"
           style={{ backgroundImage: `url(${avatarImage})` }}
@@ -31,7 +29,17 @@ const Projects = ({ data }) => {
         <section className="mt-8 projects__about">
           <div className="container-fluid">
             <div className="projects__main-section-title col-md-12 mb-4 pl-0">
-              <h3 className="h6 text-muted">Hello <span className="pl-1" role="img" aria-label="hello" style={{fontSize: '1.5rem'}}>👋</span></h3>
+              <h3 className="h6 text-muted">
+                Hello{' '}
+                <span
+                  className="pl-1"
+                  role="img"
+                  aria-label="hello"
+                  style={{ fontSize: '1.5rem' }}
+                >
+                  👋
+                </span>
+              </h3>
             </div>
             <div className="projects__about-card">
               <div className="row">
@@ -89,9 +97,7 @@ const Projects = ({ data }) => {
                 const isEven = index % 2 === 1;
                 return (
                   <div key={project.node.id} className="col-12 mb-4">
-                    <AniLink
-                      fade
-                      duration={0.2}
+                    <Link
                       to={project.node.frontmatter.path}
                       className="article-card"
                     >
@@ -130,7 +136,7 @@ const Projects = ({ data }) => {
                           />
                         </div>
                       </article>
-                    </AniLink>
+                    </Link>
                   </div>
                 );
               })}

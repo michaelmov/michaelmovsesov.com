@@ -1,9 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { useEffect, useState } from 'react';
 
 const Project = ({ data }) => {
@@ -27,9 +26,9 @@ const Project = ({ data }) => {
       if (scroll <= heroHeight) {
         setHeroTextStyles({
           ...heroTextStyles,
-          opacity: heroTextStyles.opacity - scroll /300,
+          opacity: heroTextStyles.opacity - scroll / 300,
           translateY: scroll / 3 - 30,
-        })
+        });
       }
     });
   };
@@ -37,8 +36,7 @@ const Project = ({ data }) => {
   useEffect(() => {
     initTitleParallax();
   }, []);
-  
-  
+
   if (project.frontmatter.hero_image) {
     heroImage = (
       <BackgroundImage
@@ -52,14 +50,17 @@ const Project = ({ data }) => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <header className={`project__hero article__hero d-flex align-items-center justify-content-center text-white ${heroOverlayClass}`}>
+      <header
+        className={`project__hero article__hero d-flex align-items-center justify-content-center text-white ${heroOverlayClass}`}
+      >
         {heroImage}
         <div className="container-fluid">
           <div className="row">
-            <div className="col-12 article__hero-text d-flex flex-column align-items-center"
+            <div
+              className="col-12 article__hero-text d-flex flex-column align-items-center"
               style={{
                 opacity: heroTextStyles.opacity,
-                transform: `translateY(${heroTextStyles.translateY}%)`
+                transform: `translateY(${heroTextStyles.translateY}%)`,
               }}
             >
               <h1 className="h2 text-center article__hero-title mb-4">
@@ -84,9 +85,7 @@ const Project = ({ data }) => {
           <div className="article__content bg-white px-4 py-8">
             <article id="article-wrapper">
               <p>
-                <AniLink fade duration={0.2} to="/projects">
-                  Back to Projects
-                </AniLink>
+                <Link to="/projects">Back to Projects</Link>
               </p>
               <h5 className="mb-2">Client</h5>
               <p>
@@ -101,9 +100,7 @@ const Project = ({ data }) => {
                 dangerouslySetInnerHTML={{ __html: project.html }}
               />
               <p>
-                <AniLink fade duration={0.2} to="/projects">
-                  Back to Projects
-                </AniLink>
+                <Link to="/projects">Back to Projects</Link>
               </p>
             </article>
           </div>

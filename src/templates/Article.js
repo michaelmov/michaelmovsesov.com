@@ -1,14 +1,12 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { DiscussionEmbed } from 'disqus-react';
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar_small.jpg';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Article = ({ data }) => {
   const article = data.markdownRemark;
@@ -24,7 +22,7 @@ const Article = ({ data }) => {
   const [heroTextStyles, setHeroTextStyles] = useState({
     opacity: 1,
     translateY: 0,
-  })
+  });
 
   const initTitleParallax = () => {
     const articleHeroSection = document.querySelector('.article__hero');
@@ -39,7 +37,7 @@ const Article = ({ data }) => {
           ...heroTextStyles,
           opacity: heroTextStyles.opacity - scroll / 250,
           translateY: scroll / 3.5,
-        })
+        });
       }
     });
 
@@ -52,11 +50,9 @@ const Article = ({ data }) => {
     });
   };
 
-
   useEffect(() => {
     initTitleParallax();
   }, []);
-
 
   if (article.frontmatter.hero_image) {
     heroImage = (
@@ -77,10 +73,11 @@ const Article = ({ data }) => {
         {heroImage}
         <div className="container-fluid" style={{ zIndex: 1 }}>
           <div className="row">
-            <div className="col-12 article__hero-text" 
+            <div
+              className="col-12 article__hero-text"
               style={{
                 opacity: heroTextStyles.opacity,
-                transform: `translateY(${heroTextStyles.translateY}%)`
+                transform: `translateY(${heroTextStyles.translateY}%)`,
               }}
             >
               <h1 className="h2 text-center article__hero-title mb-4">
@@ -97,12 +94,12 @@ const Article = ({ data }) => {
       <main className="article__main">
         <div className="container-fluid">
           <div className="article__content bg-white px-4 pt-12">
-            <AniLink fade duration={0.2} to="/">
+            <Link to="/">
               <div
                 className="article__author-avatar"
                 style={{ backgroundImage: `url(${avatarImage})` }}
               />
-            </AniLink>
+            </Link>
             <article
               id="article-wrapper"
               dangerouslySetInnerHTML={{ __html: article.html }}

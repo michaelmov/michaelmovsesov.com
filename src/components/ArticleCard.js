@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
 
 const ArticleLink = ({ children, link, isExternal }) => {
   if (isExternal) {
@@ -10,14 +10,17 @@ const ArticleLink = ({ children, link, isExternal }) => {
       </a>
     );
   } else {
-    return (
-      <AniLink fade to={link} duration={0.2}>
-        {children}
-      </AniLink>
-    );
+    return <Link to={link}>{children}</Link>;
   }
 };
-const ArticleCard = ({ title, excerpt, path, isExternal, iconClass, border }) => {
+const ArticleCard = ({
+  title,
+  excerpt,
+  path,
+  isExternal,
+  iconClass,
+  border,
+}) => {
   const borderClass = border ? 'article-card--border' : '';
   return (
     <article className={`article-card ml-4 ${borderClass}`}>
@@ -40,7 +43,7 @@ ArticleCard.propTypes = {
   path: PropTypes.string,
   isExternal: PropTypes.bool,
   iconClass: PropTypes.string,
-  border: PropTypes.bool
+  border: PropTypes.bool,
 };
 
 ArticleCard.defaultProps = {
@@ -49,7 +52,7 @@ ArticleCard.defaultProps = {
   path: '/',
   isExternal: true,
   iconClass: 'far fa-newspaper',
-  border: true
+  border: true,
 };
 
 export default ArticleCard;
