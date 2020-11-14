@@ -21,6 +21,13 @@ const HomeHeader = ({ siteTitle, siteDescription }) => (
           </h2>
           <div className="home__hero-social">
             <a
+              href="https://www.youtube.com/channel/UCQLGh1Y6dE4AAZmHKIS0XPg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-youtube" />
+            </a>
+            <a
               href="https://github.com/michaelmov"
               target="_blank"
               rel="noopener noreferrer"
