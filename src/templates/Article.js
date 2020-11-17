@@ -12,6 +12,7 @@ const Article = ({ data }) => {
   const article = data.markdownRemark;
   let heroImage;
   let heroOverlayClass = '';
+  let disqusEmbed = null;
 
   const disqusShortname = 'michaelmovsesov';
   const disqusConfig = {
@@ -64,6 +65,12 @@ const Article = ({ data }) => {
 
     heroOverlayClass = 'article__hero-bg-overlay';
   }
+
+  if (article.frontmatter.comments) {
+    disqusEmbed = (
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+    );
+  }
   return (
     <Layout>
       <SEO title={article.frontmatter.title} />
@@ -105,7 +112,7 @@ const Article = ({ data }) => {
               dangerouslySetInnerHTML={{ __html: article.html }}
             />
           </div>
-          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+          {disqusEmbed}
         </div>
       </main>
     </Layout>
@@ -126,6 +133,7 @@ export const articleQuery = graphql`
             }
           }
         }
+        comments
       }
       html
     }
