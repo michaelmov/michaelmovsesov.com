@@ -25,33 +25,32 @@ const Article = ({ data }) => {
     translateY: 0,
   });
 
-  const initTitleParallax = () => {
-    const articleHeroSection = document.querySelector('.article__hero');
-    const heroHeight = articleHeroSection.clientHeight;
-
-    // Header parallax
-    window.addEventListener('scroll', e => {
-      const scroll = window.scrollY;
-
-      if (scroll <= heroHeight) {
-        setHeroTextStyles({
-          ...heroTextStyles,
-          opacity: heroTextStyles.opacity - scroll / 250,
-          translateY: scroll / 3.5,
-        });
-      }
-    });
-
-    // Make all article images 100% width
-    const articleImages = document.querySelectorAll('#article-wrapper img');
-    articleImages.forEach(image => {
-      if (image.parentElement.nodeName === 'P') {
-        image.parentElement.style.width = '100%';
-      }
-    });
-  };
-
   useEffect(() => {
+    const initTitleParallax = () => {
+      const articleHeroSection = document.querySelector('.article__hero');
+      const heroHeight = articleHeroSection.clientHeight;
+
+      // Header parallax
+      window.addEventListener('scroll', e => {
+        const scroll = window.scrollY;
+
+        if (scroll <= heroHeight) {
+          setHeroTextStyles({
+            ...heroTextStyles,
+            opacity: heroTextStyles.opacity - scroll / 250,
+            translateY: scroll / 3.5,
+          });
+        }
+      });
+
+      // Make all article images 100% width
+      const articleImages = document.querySelectorAll('#article-wrapper img');
+      articleImages.forEach(image => {
+        if (image.parentElement.nodeName === 'P') {
+          image.parentElement.style.width = '100%';
+        }
+      });
+    };
     initTitleParallax();
   }, []);
 

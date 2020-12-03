@@ -15,25 +15,24 @@ const Project = ({ data }) => {
     translateY: -30,
   });
 
-  const initTitleParallax = () => {
-    const articleHeroSection = document.querySelector('.article__hero');
-    const heroHeight = articleHeroSection.clientHeight;
-
-    // Header parallax
-    window.addEventListener('scroll', e => {
-      const scroll = window.scrollY;
-
-      if (scroll <= heroHeight) {
-        setHeroTextStyles({
-          ...heroTextStyles,
-          opacity: heroTextStyles.opacity - scroll / 300,
-          translateY: scroll / 3 - 30,
-        });
-      }
-    });
-  };
-
   useEffect(() => {
+    const initTitleParallax = () => {
+      const articleHeroSection = document.querySelector('.article__hero');
+      const heroHeight = articleHeroSection.clientHeight;
+
+      // Header parallax
+      window.addEventListener('scroll', e => {
+        const scroll = window.scrollY;
+
+        if (scroll <= heroHeight) {
+          setHeroTextStyles({
+            ...heroTextStyles,
+            opacity: heroTextStyles.opacity - scroll / 300,
+            translateY: scroll / 3 - 30,
+          });
+        }
+      });
+    };
     initTitleParallax();
   }, []);
 

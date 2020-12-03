@@ -21,6 +21,13 @@ const HomeHeader = ({ siteTitle, siteDescription }) => (
           </h2>
           <div className="home__hero-social">
             <a
+              href="https://twitter.com/MichaelMov"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-twitter" />
+            </a>
+            <a
               href="https://www.youtube.com/channel/UCQLGh1Y6dE4AAZmHKIS0XPg"
               target="_blank"
               rel="noopener noreferrer"
@@ -47,13 +54,6 @@ const HomeHeader = ({ siteTitle, siteDescription }) => (
               rel="noopener noreferrer"
             >
               <i className="fab fa-linkedin" />
-            </a>
-            <a
-              href="https://twitter.com/MichaelMov"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-twitter" />
             </a>
             <a
               href="mailto:michael.movsesov@gmail.com"
