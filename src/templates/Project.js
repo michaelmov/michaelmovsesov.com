@@ -34,7 +34,7 @@ const Project = ({ data }) => {
       });
     };
     initTitleParallax();
-  }, []);
+  }, [heroTextStyles]);
 
   if (project.frontmatter.hero_image) {
     heroImage = (

@@ -52,7 +52,7 @@ const Article = ({ data }) => {
       });
     };
     initTitleParallax();
-  }, []);
+  }, [heroTextStyles]);
 
   if (article.frontmatter.hero_image) {
     heroImage = (
