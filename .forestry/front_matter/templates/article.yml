@@ -1,0 +1,34 @@
+---
+label: Article
+hide_body: true
+fields:
+- type: text
+  name: path
+  label: path
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: categories
+  label: categories
+- type: boolean
+  name: comments
+  label: comments
+- type: boolean
+  name: is_external
+  label: is_external
+- type: text
+  name: external_url
+  label: external_url
+- type: text
+  name: icon_class
+  label: icon_class
