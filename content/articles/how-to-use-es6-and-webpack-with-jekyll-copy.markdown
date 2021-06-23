@@ -5,7 +5,7 @@ title: Interactively Update NPM Packages
 description: How to update your project's NPM packages interactively
 hero_image: ''
 og_image: ''
-date: 2021-06-22T07:00:00Z
+date: 2021-06-22T07:00:00.000+00:00
 categories:
 - npm
 - javascript
