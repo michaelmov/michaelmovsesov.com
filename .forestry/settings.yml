@@ -10,7 +10,7 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: markdown
-upload_dir: content/assets
+upload_dir: content/assets/img
 public_path: "/static"
 front_matter_path: ''
 use_front_matter_path: false
