@@ -38,6 +38,9 @@
     "gatsby-remark-code-headers": "^1.1.0",
     "prettier": "^1.19.1"
   },
+  "resolutions": {
+    "caniuse-lite": "1.0.30000957"
+  },
   "keywords": [
     "gatsby"
   ],
