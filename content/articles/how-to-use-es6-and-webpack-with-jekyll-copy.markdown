@@ -16,4 +16,4 @@ To quickly update your project's NPM packages, run \`npx npm-check -u \` and sel
 
 Preview:
 
-![](content/assets/img/eoydospu0aidiqo.jpeg)
+![](../assets/img/eoydospu0aidiqo.jpeg)
