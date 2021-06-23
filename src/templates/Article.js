@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { DiscussionEmbed } from 'disqus-react';
@@ -20,14 +20,10 @@ const Article = ({ data }) => {
     title: article.frontmatter.title,
   };
 
-  const [heroTextStyles, setHeroTextStyles] = useState({
-    opacity: 1,
-    translateY: 0,
-  });
-
   useEffect(() => {
     const initTitleParallax = () => {
       const articleHeroSection = document.querySelector('.article__hero');
+      const articleHeroText = document.querySelector('#article-hero-text');
       const heroHeight = articleHeroSection.clientHeight;
 
       // Header parallax
@@ -35,11 +31,9 @@ const Article = ({ data }) => {
         const scroll = window.scrollY;
 
         if (scroll <= heroHeight) {
-          setHeroTextStyles({
-            ...heroTextStyles,
-            opacity: heroTextStyles.opacity - scroll / 250,
-            translateY: scroll / 3.5,
-          });
+          console.log(scroll);
+          articleHeroText.style.opacity = 1 - scroll / 250;
+          articleHeroText.style.transform = `translateY(${scroll / 3.5}%)`;
         }
       });
 
@@ -52,7 +46,7 @@ const Article = ({ data }) => {
       });
     };
     initTitleParallax();
-  }, [heroTextStyles]);
+  });
 
   if (article.frontmatter.hero_image) {
     heroImage = (
@@ -79,13 +73,7 @@ const Article = ({ data }) => {
         {heroImage}
         <div className="container-fluid" style={{ zIndex: 1 }}>
           <div className="row">
-            <div
-              className="col-12 article__hero-text"
-              style={{
-                opacity: heroTextStyles.opacity,
-                transform: `translateY(${heroTextStyles.translateY}%)`,
-              }}
-            >
+            <div id="article-hero-text" className="col-12 article__hero-text">
               <h1 className="h2 text-center article__hero-title mb-4">
                 {article.frontmatter.title}
               </h1>
