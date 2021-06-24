@@ -1,0 +1,28 @@
+---
+label: Written Article
+hide_body: false
+fields:
+- type: text
+  name: path
+  label: path
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: datetime
+  name: date
+  label: date
+- type: list
+  name: categories
+  label: categories
+- type: boolean
+  name: comments
+  label: comments
+- type: text
+  name: icon_class
+  label: icon_class
