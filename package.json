@@ -18,6 +18,7 @@
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-remark-images": "^3.11.1",
+    "gatsby-remark-images-medium-zoom": "^1.7.0",
     "gatsby-remark-prismjs": "^3.13.0",
     "gatsby-remark-static-images": "^1.2.1",
     "gatsby-source-filesystem": "^2.11.1",
