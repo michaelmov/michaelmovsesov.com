@@ -1,0 +1,31 @@
+---
+label: Written Article
+hide_body: false
+fields:
+- type: text
+  name: path
+  label: path
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: hero_image
+  label: hero_image
+- type: text
+  name: og_image
+  label: og_image
+- type: datetime
+  name: date
+  label: date
+- type: list
+  name: categories
+  label: categories
+- type: boolean
+  name: comments
+  label: comments
