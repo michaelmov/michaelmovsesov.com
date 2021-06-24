@@ -40,3 +40,8 @@ fields:
 - type: boolean
   name: comments
   label: Allow Comments
+- name: icon_class
+  type: text
+  config:
+    required: false
+  label: Icon Class (font awesome)
