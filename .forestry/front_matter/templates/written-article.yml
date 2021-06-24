@@ -8,18 +8,20 @@ fields:
 - type: text
   name: layout
   label: layout
+  default: post
 - type: text
   name: title
   label: title
 - type: textarea
   name: description
   label: description
+- name: categories
+  type: tag_list
+  default: []
+  label: categories
 - type: datetime
   name: date
   label: date
-- type: text
-  name: categories
-  label: categories
 - type: boolean
   name: comments
   label: comments
