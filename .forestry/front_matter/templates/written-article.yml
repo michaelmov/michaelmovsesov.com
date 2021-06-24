@@ -8,24 +8,26 @@ fields:
 - type: text
   name: layout
   label: layout
+  default: post
 - type: text
   name: title
   label: title
 - type: text
   name: description
   label: description
+- type: datetime
+  name: date
+  label: date
+- name: categories
+  type: tag_list
+  default: []
+  label: categories
 - type: text
   name: hero_image
   label: hero_image
 - type: text
   name: og_image
   label: og_image
-- type: datetime
-  name: date
-  label: date
-- type: list
-  name: categories
-  label: categories
 - type: boolean
   name: comments
   label: comments
