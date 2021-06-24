@@ -32,5 +32,3 @@ fields:
 - type: text
   name: icon_class
   label: icon_class
-pages:
-- content/articles/git-ignore-everything-inside-directory-except-the-directory-itself.markdown
