@@ -28,6 +28,15 @@ fields:
 - type: text
   name: og_image
   label: og_image
+- name: is_external
+  type: boolean
+  label: Is External
+  default: false
+- name: external_url
+  type: text
+  config:
+    required: false
+  label: External Url
 - type: boolean
   name: comments
-  label: comments
+  label: Allow Comments
