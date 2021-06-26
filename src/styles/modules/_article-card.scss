@@ -64,9 +64,10 @@
       right: 0;
       height: 0.5rem;
       background-image: linear-gradient(
-      to left,
-      $primary-green 0%,
-      $primary-blue 200%);
+        to left,
+        $primary-green 0%,
+        $primary-blue 200%
+      );
 
       @include media-breakpoint-down(sm) {
         left: 0;
@@ -77,7 +78,8 @@
         background-image: linear-gradient(
           to top,
           $primary-green 0%,
-          $primary-blue 200%);
+          $primary-blue 200%
+        );
       }
     }
   }

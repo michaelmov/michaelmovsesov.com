@@ -11,7 +11,8 @@ h6,
 .h5,
 .h6 {
   font-family: $font-family-headings;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 0.09rem;
 }
 
 @include media-breakpoint-down(sm) {

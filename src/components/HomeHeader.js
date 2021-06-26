@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import avatarImage from './../../content/assets/img/michael_movsesov_avatar_small.jpg';
+import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
 
 const HomeHeader = ({ siteTitle, siteDescription }) => (
   <header className="home__hero d-flex align-items-center text-white">

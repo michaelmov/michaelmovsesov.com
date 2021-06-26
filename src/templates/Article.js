@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { DiscussionEmbed } from 'disqus-react';
-import avatarImage from './../../content/assets/img/michael_movsesov_avatar_small.jpg';
+import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -31,7 +31,6 @@ const Article = ({ data }) => {
         const scroll = window.scrollY;
 
         if (scroll <= heroHeight) {
-          console.log(scroll);
           articleHeroText.style.opacity = 1 - scroll / 250;
           articleHeroText.style.transform = `translateY(${scroll / 3.5}%)`;
         }

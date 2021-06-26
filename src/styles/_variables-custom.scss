@@ -5,7 +5,7 @@ $container-padding: 3%;
 
 // Typography
 
-$font-family-headings: 'Arvo', serif;
+$font-family-headings: 'Abril', serif;
 $font-family-regular: 'Lato', serif;
 $font-family-base: $font-family-regular;
 $font-size-base: 1.125rem; // 18px (Assumes the browser default, typically `16px`)
@@ -29,8 +29,9 @@ $blockquote-font-size: $font-size-base;
 // Colors
 $body-color: rgba(0, 0, 0, 0.7);
 $link-color: $body-color;
-$primary-blue: #134e5e;
-$primary-green: #71b280;
+$primary-blue: #010044;
+$primary-green: #219ebcff;
+$ternary-orange: #fb8500;
 
 $theme-colors: ();
 $theme-colors: map-merge(
