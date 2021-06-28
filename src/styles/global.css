@@ -4,14 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Mixins */
-@define-mixin card-raise {
-  text-decoration: none;
-  transform: translateY(-10px);
-  box-shadow: 0px 30px 50px -17px rgba(0, 0, 0, 0.3),
-    0px 3px 20px rgba(0, 0, 0, 0.1);
-}
-
 /* Custom elements */
 .mm_section-title {
   &:after {
@@ -27,13 +19,48 @@
 }
 
 .mm_article-card {
-  &__icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  @apply relative
+  transition-all ease-in-out duration-200;
+
+  &:before {
+    @apply absolute
+    top-0 left-0 bottom-0
+    bg-gradient-to-b from-primary-800 to-primary-300;
+    width: 0.5rem;
+
+    @screen lg {
+      @apply top-0 left-0 right-0
+      bg-gradient-to-r from-primary-800 to-primary-300;
+      width: auto;
+      height: 0.5rem;
+    }
+
+    content: '';
   }
 
   &:hover {
-    @mixin card-raise;
+    text-decoration: none;
+    transform: translateY(-10px);
+    box-shadow: 0px 30px 50px -17px rgba(0, 0, 0, 0.3),
+      0px 3px 20px rgba(0, 0, 0, 0.1);
   }
+}
+
+.mm_article-icon {
+  @apply absolute 
+  bg-gradient-to-tr 
+  from-primary-800 
+  to-primary-200
+  border-4 border-white border-solid
+  rounded-full
+  flex
+  flex-col
+  justify-center
+  items-center;
+
+  height: 70px;
+  width: 70px;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
 }
