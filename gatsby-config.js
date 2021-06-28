@@ -89,11 +89,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        data: `@import 'variables-custom.scss'; 
-          @import './base/mixins';`,
-        includePaths: ['src/styles', 'src/components'],
+        postCssPlugins: [
+          require('tailwindcss'),
+          require('postcss-nesting'),
+          require('postcss-mixins'),
+          require('autoprefixer'),
+        ],
       },
     },
     {

@@ -23,10 +23,10 @@ const ArticleCard = ({
 }) => {
   const borderClass = border ? 'article-card--border' : '';
   return (
-    <article className={`article-card ml-4 ${borderClass}`}>
+    <article className="mm_article-card relative   transition-all ease-in-out duration-200">
       <ArticleLink isExternal={isExternal} link={path}>
-        <div className="bg-white pl-6 pr-4 pt-6 pb-4 pt-md-5 pb-md-4">
-          <div className="article-card__icon text-white d-flex justify-content-center align-items-center">
+        <div className="bg-white pl-6 pr-4 pt-6 pb-4">
+          <div className="mm_article-card__icon">
             <i className={iconClass || 'far fa-newspaper'} />
           </div>
           <h4 className="mb-1">{title}</h4>

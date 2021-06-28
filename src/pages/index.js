@@ -22,32 +22,29 @@ const IndexPage = ({ data, location }) => {
           siteTitle={siteMetadata.title}
           siteDescription={siteMetadata.description}
         />
-        <div className="container-fluid pt-8">
-          <div className="row">
-            <div className="home__main-section-title col-md-12 mb-4">
-              <h3 className="h6 text-muted">Latest</h3>
-            </div>
-            {articles.map(article => {
-              return (
-                <div
-                  key={article.node.id}
-                  className="col-md-12 home__article-wrapper mb-6"
-                >
-                  <ArticleCard
-                    title={article.node.frontmatter.title}
-                    excerpt={article.node.frontmatter.description}
-                    path={
-                      article.node.frontmatter.is_external
-                        ? article.node.frontmatter.external_url
-                        : article.node.frontmatter.path
-                    }
-                    isExternal={article.node.frontmatter.is_external}
-                    iconClass={article.node.frontmatter.icon_class}
-                  />
-                </div>
-              );
-            })}
+        <div className="container pt-8 grid grid-cols-12">
+          <div className="col-span-12 mb-4">
+            <h3 className="mm_section-title relative text-gray-400 font-bold">
+              Latest
+            </h3>
           </div>
+          {articles.map(article => {
+            return (
+              <div key={article.node.id} className="col-span-12 mb-6">
+                <ArticleCard
+                  title={article.node.frontmatter.title}
+                  excerpt={article.node.frontmatter.description}
+                  path={
+                    article.node.frontmatter.is_external
+                      ? article.node.frontmatter.external_url
+                      : article.node.frontmatter.path
+                  }
+                  isExternal={article.node.frontmatter.is_external}
+                  iconClass={article.node.frontmatter.icon_class}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </Layout>

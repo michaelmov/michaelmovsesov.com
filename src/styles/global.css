@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto+Mono:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mixins */
+@define-mixin card-raise {
+  text-decoration: none;
+  transform: translateY(-10px);
+  box-shadow: 0px 30px 50px -17px rgba(0, 0, 0, 0.3),
+    0px 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom elements */
+.mm_section-title {
+  &:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 60px;
+    width: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    @apply bg-gray-400;
+  }
+}
+
+.mm_article-card {
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    @mixin card-raise;
+  }
+}
