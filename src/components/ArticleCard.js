@@ -21,12 +21,11 @@ const ArticleCard = ({
   iconClass,
   border,
 }) => {
-  const borderClass = border ? 'article-card--border' : '';
   const iconBaseClasses = 'text-3xl';
   return (
     <article className="mm_article-card">
       <ArticleLink isExternal={isExternal} link={path}>
-        <div className="bg-white pl-12 pr-12 pt-8 pb-8">
+        <div className="bg-white p-12">
           <div className="mm_article-icon text-white">
             <i
               className={

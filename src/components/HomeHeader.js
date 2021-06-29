@@ -3,18 +3,18 @@ import React from 'react';
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
 
 const HomeHeader = ({ siteTitle, siteDescription }) => (
-  <header className="text-white bg-gradient-to-br h-96 from-primary-300 to-primary-800 flex align-middle lg:text-left text-center">
+  <header className="mm_home-header">
     <div className="container grid grid-cols-12 gap-4">
       <div className="lg:col-span-2 col-span-12 flex lg:flex-col justify-center items-center">
         <a href="/" className="block">
           <div
-            className="h-32 w-32 lg:h-36 lg:w-36 rounded-full bg-no-repeat bg-cover border-4 border-solid border-secondary-300"
+            className="h-32 w-32 rounded-full bg-no-repeat bg-cover border-4 border-solid border-secondary-300"
             style={{ backgroundImage: `url(${avatarImage})` }}
           />
         </a>
       </div>
       <div className="lg:col-span-6 col-span-12 flex flex-col lg:justify-center lg:pl-3">
-        <h1 className="font-display text-2xl lg:text-4xl mb-2">{siteTitle}</h1>
+        <h1 className="font-display text-2xl lg:text-3xl mb-2">{siteTitle}</h1>
         <h2 className="text-sm lg:text-md mb-2 tracking-wider font-light">
           {siteDescription}
         </h2>

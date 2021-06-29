@@ -17,6 +17,7 @@ module.exports = {
         '2xl': '960px',
       },
     },
+
     extend: {
       colors: {
         primary: {

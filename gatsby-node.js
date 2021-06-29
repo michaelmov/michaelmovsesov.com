@@ -5,24 +5,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   // Cache templates
   const articleTemplate = path.resolve('src/templates/Article.js');
-  const projectTemplate = path.resolve('src/templates/Project.js');
 
   return graphql(`
     {
       articles: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/articles/" } }
-      ) {
-        edges {
-          node {
-            id
-            frontmatter {
-              path
-            }
-          }
-        }
-      }
-      projects: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/projects/" } }
       ) {
         edges {
           node {
@@ -48,11 +35,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     });
 
     // Create project pages
-    res.data.projects.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: projectTemplate,
-      });
-    });
+    // res.data.projects.edges.forEach(({ node }) => {
+    //   createPage({
+    //     path: node.frontmatter.path,
+    //     component: projectTemplate,
+    //   });
+    // });
   });
 };
