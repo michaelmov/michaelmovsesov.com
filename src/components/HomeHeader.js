@@ -5,15 +5,15 @@ import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg'
 const HomeHeader = ({ siteTitle, siteDescription }) => (
   <header className="mm_home-header">
     <div className="container grid grid-cols-12 gap-4">
-      <div className="lg:col-span-2 col-span-12 flex lg:flex-col justify-center items-center">
+      <div className="lg:col-span-2 col-span-12 flex lg:flex-col justify-center items-end lg:items-center">
         <a href="/" className="block">
           <div
-            className="h-32 w-32 rounded-full bg-no-repeat bg-cover border-4 border-solid border-secondary-300"
+            className="h-24 w-24 lg:h-28 lg:w-28 rounded-full bg-no-repeat bg-cover border-4 border-solid border-secondary-300"
             style={{ backgroundImage: `url(${avatarImage})` }}
           />
         </a>
       </div>
-      <div className="lg:col-span-6 col-span-12 flex flex-col lg:justify-center lg:pl-3">
+      <div className="lg:col-span-10 col-span-12 flex flex-col lg:justify-center">
         <h1 className="font-display text-2xl lg:text-3xl mb-2">{siteTitle}</h1>
         <h2 className="text-sm lg:text-md mb-2 tracking-wider font-light">
           {siteDescription}
