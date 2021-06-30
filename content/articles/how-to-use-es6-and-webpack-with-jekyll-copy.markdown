@@ -16,4 +16,4 @@ To quickly update your project's NPM packages, run `npx npm-check -u` and select
 
 Preview:
 
-![](../assets/img/eoydospu0aidiqo.jpeg)
+![](../assets/img/npm-check.jpg)

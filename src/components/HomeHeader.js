@@ -18,48 +18,48 @@ const HomeHeader = ({ siteTitle, siteDescription }) => (
         <h2 className="text-sm lg:text-md mb-2 tracking-wider font-light">
           {siteDescription}
         </h2>
-        <div className="text-3xl">
+        <div className="text-2xl">
           <a
             href="https://twitter.com/MichaelMov"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-twitter mr-3" />
+            <i className="fab fa-twitter mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
           </a>
           <a
             href="https://www.youtube.com/channel/UCQLGh1Y6dE4AAZmHKIS0XPg"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-youtube mr-3" />
+            <i className="fab fa-youtube mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
           </a>
           <a
             href="https://github.com/michaelmov"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-github mr-3" />
+            <i className="fab fa-github mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
           </a>
           <a
             href="https://codepen.io/michaelmov/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-codepen mr-3" />
+            <i className="fab fa-codepen mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
           </a>
           <a
             href="https://www.linkedin.com/in/michaelmov"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-linkedin mr-3" />
+            <i className="fab fa-linkedin mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
           </a>
           <a
             href="mailto:michael.movsesov@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="far fa-envelope" />
+            <i className="far fa-envelope hover:text-secondary-300 transition-colors duration-300 ease-linear" />
           </a>
         </div>
       </div>

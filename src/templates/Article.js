@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
 import { DiscussionEmbed } from 'disqus-react';
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
 
@@ -10,8 +9,6 @@ import SEO from '../components/seo';
 
 const Article = ({ data }) => {
   const article = data.markdownRemark;
-  let heroImage;
-  let heroOverlayClass = '';
   let disqusEmbed = null;
 
   const disqusShortname = 'michaelmovsesov';
@@ -47,17 +44,6 @@ const Article = ({ data }) => {
     initTitleParallax();
   });
 
-  if (article.frontmatter.hero_image) {
-    heroImage = (
-      <BackgroundImage
-        className="article__hero-image"
-        fluid={article.frontmatter.hero_image.childImageSharp.fluid}
-      />
-    );
-
-    heroOverlayClass = 'article__hero-bg-overlay';
-  }
-
   if (article.frontmatter.comments) {
     disqusEmbed = (
       <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
@@ -67,25 +53,24 @@ const Article = ({ data }) => {
     <Layout>
       <SEO title={article.frontmatter.title} />
       <header
-        className={`article__hero flex items-center justify-center text-white ${heroOverlayClass}`}
+        className={`article__hero flex items-center justify-center text-white`}
       >
-        {heroImage}
         <div className="container grid-cols-12" style={{ zIndex: 1 }}>
           <div
             id="article-hero-text"
             className="col-span-12 text-center lg:-mt-48"
           >
-            <h1 className="font-display leading-relaxed text-xl lg:text-4xl lg:leading-relaxed mb-10">
+            <h1 className="font-display leading-relaxed text-2xl lg:text-4xl lg:leading-relaxed mb-10">
               {article.frontmatter.title}
             </h1>
-            <h2 className="tracking-widest text-sm lg:text-lg font-thin">
+            <h2 className="tracking-wide text-gray-300 font-thin">
               {article.frontmatter.date}
             </h2>
           </div>
         </div>
       </header>
       <div />
-      <main className="article__main relative z-20 bg-white">
+      <main className="article__main relative z-20 bg-white mb-16">
         <div className="container">
           <div className="article__content bg-white px-1 pt-20 lg:px-12 lg:pt-36">
             <Link to="/">
