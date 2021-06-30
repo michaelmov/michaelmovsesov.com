@@ -3,66 +3,64 @@ import React from 'react';
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
 
 const HomeHeader = ({ siteTitle, siteDescription }) => (
-  <header className="home__hero d-flex align-items-center text-white">
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2 d-flex justify-content-center my-1">
-          <a href="/" className="d-block">
-            <div
-              className="home__hero-avatar"
-              style={{ backgroundImage: `url(${avatarImage})` }}
-            />
+  <header className="mm_home-header">
+    <div className="container grid grid-cols-12 gap-4">
+      <div className="lg:col-span-2 col-span-12 flex lg:flex-col justify-center items-end lg:items-center">
+        <a href="/" className="block">
+          <div
+            className="h-24 w-24 lg:h-28 lg:w-28 rounded-full bg-no-repeat bg-cover border-4 border-solid border-secondary-300"
+            style={{ backgroundImage: `url(${avatarImage})` }}
+          />
+        </a>
+      </div>
+      <div className="lg:col-span-10 col-span-12 flex flex-col lg:justify-center">
+        <h1 className="font-display text-2xl lg:text-3xl mb-2">{siteTitle}</h1>
+        <h2 className="text-sm lg:text-md mb-2 tracking-wider font-light">
+          {siteDescription}
+        </h2>
+        <div className="text-2xl">
+          <a
+            href="https://twitter.com/MichaelMov"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-twitter mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
           </a>
-        </div>
-        <div className="col d-flex my-1 justify-content-center align-items-center align-items-md-start flex-column">
-          <h1 className="home__hero-title h3 mb-1">{siteTitle}</h1>
-          <h2 className="home__hero-subtitle h6 text-uppercase mb-2">
-            {siteDescription}
-          </h2>
-          <div className="home__hero-social">
-            <a
-              href="https://twitter.com/MichaelMov"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-twitter" />
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCQLGh1Y6dE4AAZmHKIS0XPg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-youtube" />
-            </a>
-            <a
-              href="https://github.com/michaelmov"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-github" />
-            </a>
-            <a
-              href="https://codepen.io/michaelmov/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-codepen" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/michaelmov"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin" />
-            </a>
-            <a
-              href="mailto:michael.movsesov@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="far fa-envelope" />
-            </a>
-          </div>
+          <a
+            href="https://www.youtube.com/channel/UCQLGh1Y6dE4AAZmHKIS0XPg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-youtube mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
+          </a>
+          <a
+            href="https://github.com/michaelmov"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-github mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
+          </a>
+          <a
+            href="https://codepen.io/michaelmov/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-codepen mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/michaelmov"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
+          </a>
+          <a
+            href="mailto:michael.movsesov@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="far fa-envelope hover:text-secondary-300 transition-colors duration-300 ease-linear" />
+          </a>
         </div>
       </div>
     </div>

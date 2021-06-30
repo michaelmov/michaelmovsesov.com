@@ -8,12 +8,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Footer from './Footer';
-import './../styles/main.scss';
+import './../styles/global.css';
 
 const Layout = ({ children }) => {
   return (
     <>
-      <main>{children}</main>
+      <main className="font-body bg-gray-100 text-gray-700">{children}</main>
       <Footer />
     </>
   );

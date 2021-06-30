@@ -21,15 +21,21 @@ const ArticleCard = ({
   iconClass,
   border,
 }) => {
-  const borderClass = border ? 'article-card--border' : '';
+  const iconBaseClasses = 'text-3xl';
   return (
-    <article className={`article-card ml-4 ${borderClass}`}>
+    <article className="mm_article-card">
       <ArticleLink isExternal={isExternal} link={path}>
-        <div className="bg-white pl-6 pr-4 pt-6 pb-4 pt-md-5 pb-md-4">
-          <div className="article-card__icon text-white d-flex justify-content-center align-items-center">
-            <i className={iconClass || 'far fa-newspaper'} />
+        <div className="bg-white p-12">
+          <div className="mm_article-icon text-white">
+            <i
+              className={
+                iconClass
+                  ? `${iconClass} ${iconBaseClasses}`
+                  : `far fa-newspaper ${iconBaseClasses}`
+              }
+            />
           </div>
-          <h4 className="mb-1">{title}</h4>
+          <h4 className="text-xl font-display font-bold pb-2">{title}</h4>
           <p>{excerpt}</p>
         </div>
       </ArticleLink>

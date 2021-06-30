@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = props => {
   return (
-    <footer className="footer py-4 bg-light">
-      <div className="container-fluid">
-        <div className="col-md-12 d-flex justify-content-center">
-          <span className="text-muted text-uppercase">
+    <footer className="footer py-12 bg-gray-100">
+      <div className="container">
+        <div className="flex justify-center items-center">
+          <span className="uppercase tracking-wide text-gray-400">
             ©{new Date().getFullYear()} Michael Movsesov, All Rights Reserved
           </span>
         </div>

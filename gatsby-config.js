@@ -34,13 +34,13 @@ module.exports = {
         name: 'articles',
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/projects`,
-        name: 'projects',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/content/projects`,
+    //     name: 'projects',
+    //   },
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -89,11 +89,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        data: `@import 'variables-custom.scss'; 
-          @import './base/mixins';`,
-        includePaths: ['src/styles', 'src/components'],
+        postCssPlugins: [
+          require('tailwindcss'),
+          require('tailwindcss/nesting'),
+          require('autoprefixer'),
+        ],
       },
     },
     {

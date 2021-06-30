@@ -6,7 +6,7 @@ description: "ES6 module awesomeness is now available in browsers near you."
 hero_image: ../assets/img/es6-modules-browser-support-hero.jpg
 og_image: ../assets/img/es6-modules-browser-featured.jpg
 date: 2018-05-31
-categories: frontend javascript es6
+categories: 
 comments: true
 ---
 
@@ -91,6 +91,6 @@ Of course, I am not suggesting the we ditch our build systems and swtich over to
 
 ### Browser Support
 
-![ES6 Modules Browser Support](../assets/img/es6-modules-browser-support.png "ES6 Modules Browser Support")
+![ES6 Modules Browser Support](../assets/img/es6-modules-browser-support-browsers.png "ES6 Modules Browser Support")
 
 <!-- ![ES6 Modules Browser Support](../assets/img/es6-modules-browser-support-hero.jpg "ES6 Modules Browser Support") -->
