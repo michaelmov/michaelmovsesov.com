@@ -5,6 +5,7 @@ fields:
 - type: text
   name: path
   label: path
+  default: "/articles/untitiled-article"
 - type: text
   name: layout
   label: layout
