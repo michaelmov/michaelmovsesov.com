@@ -5,6 +5,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   // Cache templates
   const articleTemplate = path.resolve('src/templates/Article.js');
+  const screenshotTemplate = path.resolve('src/templates/Screenshot.js');
 
   return graphql(`
     {
@@ -31,6 +32,16 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: articleTemplate,
+        context: { slug: node.frontmatter.path },
+      });
+    });
+
+    // Create article screenshot pages
+    res.data.articles.edges.forEach(({ node }) => {
+      createPage({
+        path: `${node.frontmatter.path}/screenshot`,
+        component: screenshotTemplate,
+        context: { slug: node.frontmatter.path },
       });
     });
 

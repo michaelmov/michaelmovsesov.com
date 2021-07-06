@@ -92,8 +92,8 @@ const Article = ({ data }) => {
 };
 
 export const articleQuery = graphql`
-  query ArticleByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ArticleByPath($slug: String!) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       frontmatter {
         path
         title
