@@ -35,11 +35,11 @@ const Screenshot = ({ data }) => {
               alt="Author"
               className="w-20 h-20 rounded-full mr-3 border-4 border-primary-100"
             />
-            <h2 className="text-3xl text-gray-600 font-body">
+            <h2 className="text-3xl text-gray-600 font-display">
               Michael Movsesov
             </h2>
           </div>
-          <h3 className="text-3xl text-gray-600 font-body">
+          <h3 className="text-3xl text-gray-600 font-display">
             {screenshot.frontmatter.date}
           </h3>
         </footer>
