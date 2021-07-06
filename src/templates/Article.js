@@ -60,11 +60,11 @@ const Article = ({ data, pageContext }) => {
           },
           {
             property: `og:image:width`,
-            content: `https://michaelmovsesov.com/${pageContext.ogImage.size.width}`,
+            content: `${pageContext.ogImage.size.width}`,
           },
           {
             property: `og:image:height`,
-            content: `https://michaelmovsesov.com/${pageContext.ogImage.size.width}`,
+            content: `${pageContext.ogImage.size.height}`,
           },
         ]}
       />
