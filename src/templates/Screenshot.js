@@ -11,7 +11,16 @@ const Screenshot = ({ data }) => {
 
   return (
     <main className="container flex justify-center">
-      <SEO title={screenshot.frontmatter.title} />
+      <SEO
+        title={screenshot.frontmatter.title}
+        meta={[
+          {
+            name: 'robots',
+            content: 'noindex,',
+          },
+        ]}
+        canonical={window.location.hostname + screenshot.frontmatter.path}
+      />
       <article
         className="mm_screenshot__article relative flex flex-col overflow-hidden bg-white pt-16 pl-28 pr-20 pb-0"
         style={{ minWidth: '1200px', minHeight: '630px' }}
@@ -19,7 +28,7 @@ const Screenshot = ({ data }) => {
         <h1 className="text-primary-400 flex-grow font-display text-6xl leading-relaxed font-bold">
           {screenshot.frontmatter.title}
         </h1>
-        <footer className="h-36 left-0 right-0 bottom-0 flex justify-between items-center">
+        <footer className="mm_screenshot__footer absolute h-36 left-0 right-0 bottom-0 flex justify-between items-center bg-gray-100 px-8">
           <div className="flex items-center">
             <img
               src={avatarImage}
@@ -44,6 +53,7 @@ export const ScreenshotQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       frontmatter {
         title
+        path
         date(formatString: "MMMM Do, YYYY")
       }
     }

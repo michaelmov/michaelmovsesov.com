@@ -85,3 +85,7 @@
     content: '';
   }
 }
+
+.mm_screenshot__footer {
+  margin-left: 2.4rem;
+}
