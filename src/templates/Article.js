@@ -7,7 +7,7 @@ import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const Article = ({ data }) => {
+const Article = ({ data, pageContext }) => {
   const article = data.markdownRemark;
   let disqusEmbed = null;
 
@@ -51,7 +51,23 @@ const Article = ({ data }) => {
   }
   return (
     <Layout>
-      <SEO title={article.frontmatter.title} />
+      <SEO
+        title={article.frontmatter.title}
+        meta={[
+          {
+            property: `og:image`,
+            content: `https://michaelmovsesov.com/${pageContext.ogImage.path}`,
+          },
+          {
+            property: `og:image:width`,
+            content: `https://michaelmovsesov.com/${pageContext.ogImage.size.width}`,
+          },
+          {
+            property: `og:image:height`,
+            content: `https://michaelmovsesov.com/${pageContext.ogImage.size.width}`,
+          },
+        ]}
+      />
       <header
         className={`article__hero flex items-center justify-center text-white`}
       >

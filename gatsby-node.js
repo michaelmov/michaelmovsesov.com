@@ -1,4 +1,5 @@
 const path = require('path');
+const { createOpenGraphImage } = require('gatsby-plugin-open-graph-images');
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -32,7 +33,15 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: articleTemplate,
-        context: { slug: node.frontmatter.path },
+        context: {
+          slug: node.frontmatter.path,
+          ogImage: createOpenGraphImage(createPage, {
+            // 1
+            path: `og-images/articles/${node.id}.png`,
+            component: screenshotTemplate,
+            context: { id: node.id, slug: node.frontmatter.path },
+          }),
+        },
       });
     });
 

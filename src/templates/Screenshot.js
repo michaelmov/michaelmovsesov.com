@@ -19,7 +19,7 @@ const Screenshot = ({ data }) => {
             content: 'noindex,',
           },
         ]}
-        canonical={window.location.hostname + screenshot.frontmatter.path}
+        canonical={`https://michaelmovsesov.com/${screenshot.frontmatter.path}`}
       />
       <article
         className="mm_screenshot__article relative flex flex-col overflow-hidden bg-white pt-16 pl-28 pr-20 pb-0"
