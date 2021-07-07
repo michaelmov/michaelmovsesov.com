@@ -59,12 +59,28 @@ const Article = ({ data, pageContext }) => {
             content: `https://michaelmovsesov.com/${pageContext.ogImage.path}`,
           },
           {
+            property: `twitter:card`,
+            content: `summary_large_image`,
+          },
+          {
+            property: `twitter:title`,
+            content: article.frontmatter.title,
+          },
+          {
+            property: `twitter:description`,
+            content: article.frontmatter.description,
+          },
+          {
             property: `twitter:image`,
             content: `https://michaelmovsesov.com/${pageContext.ogImage.path}`,
           },
           {
             property: `twitter:creator`,
             content: `@MichaelMov`,
+          },
+          {
+            property: `twitter:card`,
+            content: `summary_large_image`,
           },
           {
             property: `og:image:width`,
@@ -121,6 +137,7 @@ export const articleQuery = graphql`
       frontmatter {
         path
         title
+        description
         date(formatString: "MMMM Do, YYYY")
         hero_image {
           childImageSharp {
