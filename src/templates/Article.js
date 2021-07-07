@@ -59,6 +59,14 @@ const Article = ({ data, pageContext }) => {
             content: `https://michaelmovsesov.com/${pageContext.ogImage.path}`,
           },
           {
+            property: `twitter:image`,
+            content: `https://michaelmovsesov.com/${pageContext.ogImage.path}`,
+          },
+          {
+            property: `twitter:creator`,
+            content: `@MichaelMov`,
+          },
+          {
             property: `og:image:width`,
             content: `${pageContext.ogImage.size.width}`,
           },
