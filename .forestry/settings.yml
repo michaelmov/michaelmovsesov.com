@@ -6,7 +6,7 @@ webhook_url:
 sections:
 - type: directory
   path: content/articles
-  label: Articles
+  label: Posts
   create: documents
   match: "**/*"
   new_doc_ext: markdown
