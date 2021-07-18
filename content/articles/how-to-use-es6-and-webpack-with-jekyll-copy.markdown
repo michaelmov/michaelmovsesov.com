@@ -10,6 +10,7 @@ categories:
 - npm
 - javascript
 comments: true
+published: true
 
 ---
 To quickly update your project's NPM packages, run `npx npm-check -u` and select the packages you want to update from the list.

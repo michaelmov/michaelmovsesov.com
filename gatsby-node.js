@@ -9,7 +9,10 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       articles: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/articles/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/articles/" }
+          frontmatter: { published: { eq: true } }
+        }
       ) {
         edges {
           node {

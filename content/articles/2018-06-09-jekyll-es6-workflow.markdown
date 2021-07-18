@@ -6,8 +6,8 @@ description: "A guide to setting up a simple Webpack build process to use ES6 in
 hero_image: ../assets/img/jekyll-and-webpack-hero.jpg
 og_image: ../assets/img/jekyll-and-webpack-hero.jpg
 date: 2018-07-12
-categories: frontend javascript es6 jekyll webpack
 comments: true
+published: true
 ---
 
 Everyone knows that Webpack is awesome for bundling JavaScript projects. It has powerful features and is very customizeable. Likewise, Jekyll is an excellent static site generator. In fact, I use Jekyll for this website. Recently, I wanted to use ES6 on my website, so naturally I went straight to Webpack to solve this problem.

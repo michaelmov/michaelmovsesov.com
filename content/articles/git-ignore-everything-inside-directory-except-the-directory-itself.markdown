@@ -10,6 +10,7 @@ date: 2021-06-23T07:00:00Z
 categories:
 - git
 comments: true
+published: false
 
 ---
 Sometimes you may want to commit an empty directory into your git repo while ignoring all of its inner contents. For example, you may be creating a project boilerplate, and need to have a `postgres-data` directory that will map to your local docker container's volume and need to make sure that the direcotory is present when the repository is checked out. By default, git will not commit an empty direcotry into the repository. However, you can force git to commit an empty directory by adding a `.gitkeep` file indside that directory and editing your`.gitignore` file like so:

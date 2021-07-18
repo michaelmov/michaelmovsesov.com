@@ -61,7 +61,10 @@ export const articleQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/articles/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/articles/" }
+        frontmatter: { published: { eq: true } }
+      }
     ) {
       edges {
         node {

@@ -6,8 +6,8 @@ description: "ES6 module awesomeness is now available in browsers near you."
 hero_image: ../assets/img/es6-modules-browser-support-hero.jpg
 og_image: ../assets/img/es6-modules-browser-featured.jpg
 date: 2018-05-31
-categories: 
 comments: true
+published: true
 ---
 
 One of many things that make JavaScript awesome is it's low barrier to entry. All we need to get started is a text editor and a browser. With just a few lines of code, we can get something up and running on the screen in no time. This low barrier is crucial to anyone starting out as it leads to instant gratification. In fact, it was for this reason that I chose JavaScript as my go-to programming language when I was starting out as a developer.

@@ -10,6 +10,7 @@ categories:
 - javascript
 comments: false
 icon_class: fab fa-youtube
+published: true
 
 ---
 In this tutorial, we refractor a small app built with Vue’s older Options API to use Vue 3s latest Composition API.

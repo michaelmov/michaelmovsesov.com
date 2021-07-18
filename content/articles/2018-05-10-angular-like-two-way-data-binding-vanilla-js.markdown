@@ -6,6 +6,7 @@ description: "How to create simple two-way data binding using plain ole vanilla 
 date: 2018-05-19
 categories: frontend javascript es6
 comments: true
+published: true
 ---
 
 AngularJS was the first front-end framework that I learned. I built my first AngularJS project two years ago and have used this framework for multiple personal and professional projects since. One of the things that immediately blew my mind about AngularJS is how easy it is to bind JavaScript data to the DOM and vice-versa using directives. This feature is called two-way data binding. While I have enjoyed the benefits of Angular's two-way data binding in my projects, it always felt like magic to me. Recently, I decided to see what it would take to implement my own basic version of two-way data binding using vanilla JavaScript. With the help of [Santiago García Da Rosa's Medium post](https://medium.com/frontend-fun/js-vanilla-two-way-binding-5a29bc86c787), I was able to do just that. It turns out that it isn't very complicated and no magic or magicians required.

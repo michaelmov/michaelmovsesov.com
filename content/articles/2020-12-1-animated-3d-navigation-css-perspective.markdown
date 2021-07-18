@@ -4,9 +4,9 @@ layout: post
 title: 'Animated 3D Navigation using CSS Perspective Property'
 description: 'In this episode of Dev Cafè UI Experiments, we create an animated 3D Navigation with the help of CSS perspective property.'
 date: 2020-12-01
-categories: css
 comments: false
 icon_class: 'fab fa-youtube'
+published: true
 ---
 
 In this episode of Dev Cafè UI Experiments, we create an animated 3D Navigation with the help of CSS perspective property.
