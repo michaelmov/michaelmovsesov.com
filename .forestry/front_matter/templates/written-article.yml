@@ -49,4 +49,4 @@ fields:
 - name: published
   type: boolean
   label: Published
-  default: true
+  default: false
