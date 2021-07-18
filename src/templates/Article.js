@@ -95,7 +95,7 @@ const Article = ({ data, pageContext }) => {
       <header
         className={`article__hero flex items-center justify-center text-white`}
       >
-        <div className="container grid-cols-12" style={{ zIndex: 1 }}>
+        <div className="container grid-cols-12" style={{ zIndex: 20 }}>
           <div
             id="article-hero-text"
             className="col-span-12 text-center lg:-mt-48"

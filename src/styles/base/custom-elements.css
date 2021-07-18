@@ -1,13 +1,23 @@
 /* Custom elements */
 .mm_home-header {
   @apply text-white 
+  relative
   bg-gradient-to-br from-primary-600 to-primary-400 
   flex
   h-80
   lg:h-60
   align-middle 
   text-center
-  lg:text-left;
+  lg:text-left
+  z-0;
+
+  &:before {
+    @apply absolute
+    top-0 left-0 right-0 bottom-0
+    z-10 bg-repeat;
+    content: '';
+    background-image: url('/images/mm_hero_bg.svg');
+  }
 }
 
 .mm_section-title {

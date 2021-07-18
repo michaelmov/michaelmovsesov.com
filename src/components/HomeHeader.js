@@ -4,7 +4,7 @@ import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg'
 
 const HomeHeader = ({ siteTitle, siteDescription }) => (
   <header className="mm_home-header">
-    <div className="container grid grid-cols-12 gap-4">
+    <div className="container grid grid-cols-12 gap-4 z-20">
       <div className="lg:col-span-2 col-span-12 flex lg:flex-col justify-center items-end lg:items-center">
         <a href="/" className="block">
           <div

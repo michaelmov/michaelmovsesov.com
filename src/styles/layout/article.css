@@ -10,9 +10,16 @@ code {
   height: 350px;
   @apply relative
    bg-gradient-to-br from-primary-600 to-primary-400
-   bg-fixed bg-cover bg-scroll
+   bg-cover bg-scroll
    overflow-hidden;
 
+  &:before {
+    @apply absolute
+    top-0 left-0 right-0 bottom-0
+    z-10 bg-repeat bg-fixed;
+    content: '';
+    background-image: url('/images/mm_hero_bg.svg');
+  }
   @screen lg {
     height: 600px;
     @apply bg-fixed;
