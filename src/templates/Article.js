@@ -7,7 +7,7 @@ import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const Article = ({ data }) => {
+const Article = ({ data, pageContext }) => {
   const article = data.markdownRemark;
   let disqusEmbed = null;
 
@@ -51,7 +51,47 @@ const Article = ({ data }) => {
   }
   return (
     <Layout>
-      <SEO title={article.frontmatter.title} />
+      <SEO
+        title={article.frontmatter.title}
+        meta={[
+          {
+            property: `og:image`,
+            content: `https://michaelmovsesov.com/${pageContext.ogImage.path}`,
+          },
+          {
+            property: `twitter:card`,
+            content: `summary_large_image`,
+          },
+          {
+            property: `twitter:title`,
+            content: article.frontmatter.title,
+          },
+          {
+            property: `twitter:description`,
+            content: article.frontmatter.description,
+          },
+          {
+            property: `twitter:image`,
+            content: `https://michaelmovsesov.com/${pageContext.ogImage.path}`,
+          },
+          {
+            property: `twitter:creator`,
+            content: `@MichaelMov`,
+          },
+          {
+            property: `twitter:card`,
+            content: `summary_large_image`,
+          },
+          {
+            property: `og:image:width`,
+            content: `${pageContext.ogImage.size.width}`,
+          },
+          {
+            property: `og:image:height`,
+            content: `${pageContext.ogImage.size.height}`,
+          },
+        ]}
+      />
       <header
         className={`article__hero flex items-center justify-center text-white`}
       >
@@ -92,11 +132,12 @@ const Article = ({ data }) => {
 };
 
 export const articleQuery = graphql`
-  query ArticleByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ArticleByPath($slug: String!) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       frontmatter {
         path
         title
+        description
         date(formatString: "MMMM Do, YYYY")
         hero_image {
           childImageSharp {

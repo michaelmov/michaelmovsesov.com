@@ -75,3 +75,17 @@
     transform: translateY(-50%);
   }
 }
+
+.mm_screenshot__article {
+  &:before {
+    @apply absolute
+    top-0 left-0 bottom-0
+    bg-gradient-to-b from-primary-400 to-primary-200;
+    width: 2.4rem;
+    content: '';
+  }
+}
+
+.mm_screenshot__footer {
+  margin-left: 2.4rem;
+}
