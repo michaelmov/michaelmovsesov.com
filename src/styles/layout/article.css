@@ -42,14 +42,14 @@ code {
 }
 
 .article__main .container {
-  max-width: 1040px;
+  max-width: 900px;
 }
 
 .article__content {
   @apply relative;
 
   @screen lg {
-    transform: translateY(-200px);
+    transform: translateY(-370px);
   }
 
   a {

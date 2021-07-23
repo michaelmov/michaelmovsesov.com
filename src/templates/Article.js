@@ -1,11 +1,12 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import { DiscussionEmbed } from 'disqus-react';
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import AuthorCard from '../components/AuthorCard';
 
 const Article = ({ data, pageContext }) => {
   const article = data.markdownRemark;
@@ -16,6 +17,8 @@ const Article = ({ data, pageContext }) => {
     identifier: article.id,
     title: article.frontmatter.title,
   };
+
+  const [isAuthorCardVisible, setIsAuthorCardVisible] = useState(true);
 
   useEffect(() => {
     const initTitleParallax = () => {
@@ -109,8 +112,8 @@ const Article = ({ data, pageContext }) => {
           </div>
         </div>
       </header>
-      <div />
-      <main className="article__main relative z-20 bg-white mb-16">
+      <main className="article__main relative z-20 bg-white mb-16 pt-10">
+        {isAuthorCardVisible && <AuthorCard />}
         <div className="container">
           <div className="article__content bg-white px-1 pt-20 lg:px-12 lg:pt-36">
             <Link to="/">

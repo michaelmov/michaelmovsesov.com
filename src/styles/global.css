@@ -9,5 +9,8 @@
 @import './layout/article.css';
 
 #___gatsby {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+}
+.tl-edges {
+  overflow-x: visible;
 }

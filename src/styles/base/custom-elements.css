@@ -99,3 +99,7 @@
 .mm_screenshot__footer {
   margin-left: 2.4rem;
 }
+
+.mm_author-card__inner {
+  width: 200px;
+}
