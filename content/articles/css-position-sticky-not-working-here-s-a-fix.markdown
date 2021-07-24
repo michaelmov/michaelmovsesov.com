@@ -18,11 +18,11 @@ published: true
 ---
 Anytime you are having an issue with CSS `position:sticky`, the issue is usually  one of the following:
 
-## `position: sticky`  Is Not Compatible with Your Browser
+### `position: sticky`  Is Not Compatible with Your Browser
 
 Before you begin troubleshooting, confirm that `position: sticky` is compatible with your target browser. Check [here](https://caniuse.com/css-sticky).
 
-## Sticky Element's Placement Property Is Not Set
+### Sticky Element's Placement Property Is Not Set
 
 In order for the sticky element to function correctly, it needs to have at least one of it's `top`, `right`, `left`, or `bottom` placement properties set.
 
@@ -33,11 +33,11 @@ In order for the sticky element to function correctly, it needs to have at least
 }
 ```
 
-## Sticky Element Has Parent(s) with `overflow` Property
+### Sticky Element Has Parent(s) with `overflow` Property
 
 If the sticky element has a parent or ancestory with `overflow: hidden`, `overflow: auto`, or `overflow: scroll`, then `position: sticky` will not work properly.
 
-### How to Find Parents/Ancestors with `overflow`
+#### How to Find Parents/Ancestors with `overflow`
 
 Here's an awesome JavaScript snippet I found for qickly finding parents or ancestors with set `overflow` property. Just copy and paste into your browser's console.
 
@@ -53,5 +53,5 @@ while (parent) {
 }
 ```
 
-## Parent Element's Height Property Is Not Set
+### Parent Element's Height Property Is Not Set
 The sticky element will not have a place to stick if the parent's `height` property is not set. 
