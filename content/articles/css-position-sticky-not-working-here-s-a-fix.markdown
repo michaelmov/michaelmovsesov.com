@@ -16,3 +16,4 @@ icon_class: ''
 published: true
 
 ---
+I was recently adding some functionality to my blog and ran into an issue with CSS `position:sticky`
