@@ -35,7 +35,7 @@ In order for the sticky element to function correctly, it needs to have at least
 
 ### Sticky Element Has Parent(s) with `overflow` Property
 
-If the sticky element has a parent or ancestory with `overflow: hidden`, `overflow: auto`, or `overflow: scroll`, then `position: sticky` will not work properly. 
+If the sticky element has a parent or ancestor with `overflow: hidden`, `overflow: auto`, or `overflow: scroll`, then `position: sticky` will not work properly. 
 
 #### How to Find Parents/Ancestors with `overflow`
 
