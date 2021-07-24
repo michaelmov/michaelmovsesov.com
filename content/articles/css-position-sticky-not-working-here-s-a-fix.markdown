@@ -16,7 +16,7 @@ icon_class: ''
 published: true
 
 ---
-Anytime you are having an issue with CSS `position:sticky`, the issue is usually  one of the following:
+Anytime you are having an issue with CSS `position:sticky`, the solution is usually  one of the following:
 
 ### `position: sticky`  Is Not Compatible with Your Browser
 
