@@ -3,7 +3,7 @@ path: "/articles/fix-css-position-sticky-not-working"
 layout: post
 categories:
 - css
-title: CSS position:sticky not working? Try this fix
+title: CSS position:sticky Not Working? Try This Fix
 description: How to troubleshoot and fix CSS position:sticky when it's not working
   as expected.
 date: 2021-07-24T07:00:00Z
