@@ -16,4 +16,9 @@ icon_class: ''
 published: true
 
 ---
-I was recently adding some functionality to my blog and ran into an issue with CSS `position:sticky`
+Anytime you are having an issue with CSS `position:sticky`, the issue is usuallyu one of the following:
+
+## Element's placement property is not set
+
+In order for the sticky element to function correctly, it needs to have at least one of it's `top`, `right`, `left`, or `bottom` placement properties set. 
+
