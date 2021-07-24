@@ -35,11 +35,11 @@ In order for the sticky element to function correctly, it needs to have at least
 
 ### Sticky Element Has Parent(s) with `overflow` Property
 
-If the sticky element has a parent or ancestory with `overflow: hidden`, `overflow: auto`, or `overflow: scroll`, then `position: sticky` will not work properly.
+If the sticky element has a parent or ancestory with `overflow: hidden`, `overflow: auto`, or `overflow: scroll`, then `position: sticky` will not work properly. 
 
 #### How to Find Parents/Ancestors with `overflow`
 
-Here's an awesome JavaScript snippet I found for qickly finding parents or ancestors with set `overflow` property. Just copy and paste into your browser's console.
+Here's an awesome JavaScript snippet I found for qickly finding parents or ancestors with set `overflow` property. Just copy and paste into your browser's console ([source](https://www.designcise.com/web/tutorial/how-to-fix-issues-with-css-position-sticky-not-working)).
 
 ```javascript
 let parent = document.querySelector('.sticky-element').parentElement;
@@ -54,4 +54,5 @@ while (parent) {
 ```
 
 ### Parent Element's Height Property Is Not Set
-The sticky element will not have a place to stick if the parent's `height` property is not set. 
+
+The sticky element will not have a place to stick if the parent's `height` property is not set.
