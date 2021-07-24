@@ -39,7 +39,7 @@ If the sticky element has a parent or ancestor with `overflow: hidden`, `overflo
 
 #### How to Find Parents/Ancestors with `overflow`
 
-Here's an awesome JavaScript snippet I found for qickly finding parents or ancestors with set `overflow` property. Just copy and paste into your browser's console ([source](https://www.designcise.com/web/tutorial/how-to-fix-issues-with-css-position-sticky-not-working)).
+Here's an awesome JavaScript snippet I found to quickly find parents or ancestors with a set `overflow` property. Just copy and paste into your browser's console ([source](https://www.designcise.com/web/tutorial/how-to-fix-issues-with-css-position-sticky-not-working)).
 
 ```javascript
 let parent = document.querySelector('.sticky-element').parentElement;
