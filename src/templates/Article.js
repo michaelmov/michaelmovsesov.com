@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { graphql, Link } from 'gatsby';
 import { DiscussionEmbed } from 'disqus-react';
 import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
@@ -18,34 +18,63 @@ const Article = ({ data, pageContext }) => {
     title: article.frontmatter.title,
   };
 
-  const [isAuthorCardVisible, setIsAuthorCardVisible] = useState(true);
+  const authorAvatarRef = useRef(null);
+  const [isAuthorCardVisible, setIsAuthorCardVisible] = useState(false);
+
+  const initTitleParallax = () => {
+    const articleHeroSection = document.querySelector('.article__hero');
+    const articleHeroText = document.querySelector('#article-hero-text');
+    const heroHeight = articleHeroSection.clientHeight;
+
+    // Header parallax
+    window.addEventListener('scroll', e => {
+      const scroll = window.scrollY;
+
+      if (scroll <= heroHeight) {
+        articleHeroText.style.opacity = 1 - scroll / 250;
+        articleHeroText.style.transform = `translateY(${scroll / 3.5}%)`;
+      }
+    });
+
+    // Make all article images 100% width
+    const articleImages = document.querySelectorAll('#article-wrapper img');
+    articleImages.forEach(image => {
+      if (image.parentElement.nodeName === 'P') {
+        image.parentElement.style.width = '100%';
+      }
+    });
+  };
+
+  const observeAuthorCard = changes => {
+    changes.forEach(change => {
+      console.log(change);
+      if (change.intersectionRatio === 0 && !change.isIntersecting) {
+        setIsAuthorCardVisible(true);
+      } else {
+        setIsAuthorCardVisible(false);
+      }
+    });
+  };
 
   useEffect(() => {
-    const initTitleParallax = () => {
-      const articleHeroSection = document.querySelector('.article__hero');
-      const articleHeroText = document.querySelector('#article-hero-text');
-      const heroHeight = articleHeroSection.clientHeight;
-
-      // Header parallax
-      window.addEventListener('scroll', e => {
-        const scroll = window.scrollY;
-
-        if (scroll <= heroHeight) {
-          articleHeroText.style.opacity = 1 - scroll / 250;
-          articleHeroText.style.transform = `translateY(${scroll / 3.5}%)`;
-        }
-      });
-
-      // Make all article images 100% width
-      const articleImages = document.querySelectorAll('#article-wrapper img');
-      articleImages.forEach(image => {
-        if (image.parentElement.nodeName === 'P') {
-          image.parentElement.style.width = '100%';
-        }
-      });
-    };
     initTitleParallax();
-  });
+
+    let observerOptions = {
+      root: null, //root
+      rootMargin: '0px',
+      threshold: 0,
+    };
+    const observer = new IntersectionObserver(
+      observeAuthorCard,
+      observerOptions
+    );
+
+    observer.observe(authorAvatarRef.current);
+
+    return () => {
+      if (isAuthorCardVisible) observer.unobserve(authorAvatarRef.current);
+    };
+  }, [isAuthorCardVisible, authorAvatarRef]);
 
   if (article.frontmatter.comments) {
     disqusEmbed = (
@@ -113,13 +142,19 @@ const Article = ({ data, pageContext }) => {
         </div>
       </header>
       <main className="article__main relative z-20 bg-white mb-16 pt-10">
-        {isAuthorCardVisible && <AuthorCard />}
+        <div
+          className="sticky top-0 w-full ml-auto mr-auto pt-6 pl-6 hidden xl:block"
+          style={{ maxWidth: '1300px' }}
+        >
+          <AuthorCard isVisible={isAuthorCardVisible} />
+        </div>
         <div className="container">
           <div className="article__content bg-white px-1 pt-20 lg:px-12 lg:pt-36">
             <Link to="/">
               <div
                 className="article__author-avatar"
                 style={{ backgroundImage: `url(${avatarImage})` }}
+                ref={authorAvatarRef}
               />
             </Link>
             <article
