@@ -1,0 +1,11 @@
+.LinkButton {
+  @apply relative
+    font-display
+   text-secondary-500
+   cursor-pointer
+   transition-colors duration-300 ease-in-out;
+}
+
+.LinkButton:hover {
+  @apply text-secondary-800;
+}

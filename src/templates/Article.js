@@ -6,7 +6,9 @@ import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg'
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import LinkButton from '../components/LinkButton';
 
+const BACK_BUTTON_TEXT = '👈 Back to Home Page';
 const Article = ({ data, pageContext }) => {
   const article = data.markdownRemark;
   let disqusEmbed = null;
@@ -119,10 +121,16 @@ const Article = ({ data, pageContext }) => {
                 style={{ backgroundImage: `url(${avatarImage})` }}
               />
             </Link>
+            <div className="w-full lg:w-4/5 m-auto mb-12 flex justify-center lg:justify-start mt-6 lg:mt-0">
+              <LinkButton to="/">{BACK_BUTTON_TEXT}</LinkButton>
+            </div>
             <article
               id="article-wrapper"
               dangerouslySetInnerHTML={{ __html: article.html }}
             />
+            <div className="w-full lg:w-4/5 m-auto mt-12 flex justify-center lg:justify-start mb-12 lg:mb-0">
+              <LinkButton to="/">{BACK_BUTTON_TEXT}</LinkButton>
+            </div>
           </div>
           {disqusEmbed}
         </div>
