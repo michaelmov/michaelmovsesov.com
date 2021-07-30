@@ -52,7 +52,9 @@ code {
   @screen lg {
     transform: translateY(-200px);
   }
+}
 
+.article__content article {
   a {
     box-shadow: 0px -3px 0px 0px #156477 inset;
     text-decoration: none !important;
