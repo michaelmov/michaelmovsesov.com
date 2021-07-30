@@ -17,6 +17,7 @@
     z-10 bg-repeat;
     content: '';
     background-image: url('/images/mm_hero_bg.svg');
+    opacity: 0.3;
   }
 }
 

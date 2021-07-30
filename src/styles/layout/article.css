@@ -19,6 +19,7 @@ code {
     z-10 bg-repeat bg-fixed;
     content: '';
     background-image: url('/images/mm_hero_bg.svg');
+    opacity: 0.3;
   }
   @screen lg {
     height: 600px;
