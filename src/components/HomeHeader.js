@@ -8,7 +8,7 @@ const HomeHeader = ({ siteTitle, siteDescription }) => (
       <div className="lg:col-span-2 col-span-12 flex lg:flex-col justify-center items-end lg:items-center">
         <a href="/" className="block">
           <div
-            className="h-24 w-24 lg:h-28 lg:w-28 rounded-full bg-no-repeat bg-cover border-4 border-solid border-secondary-300"
+            className="h-24 w-24 lg:h-28 lg:w-28 rounded-full bg-no-repeat bg-cover border-8 border-solid  border-primary-500"
             style={{ backgroundImage: `url(${avatarImage})` }}
           />
         </a>

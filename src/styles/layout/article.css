@@ -9,7 +9,7 @@ code {
 .article__hero {
   height: 350px;
   @apply relative
-   bg-gradient-to-br from-primary-600 to-primary-400
+   bg-gradient-to-br from-primary-500 to-primary-300
    bg-cover bg-scroll
    overflow-hidden;
 

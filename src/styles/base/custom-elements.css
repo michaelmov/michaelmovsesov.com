@@ -2,7 +2,7 @@
 .mm_home-header {
   @apply text-white 
   relative
-  bg-gradient-to-br from-primary-600 to-primary-400 
+  bg-gradient-to-br from-primary-500 to-primary-300
   flex
   h-80
   lg:h-60
