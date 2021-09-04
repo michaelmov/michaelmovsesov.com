@@ -11,7 +11,7 @@ hero_image: ''
 og_image: ''
 is_external: false
 external_url: ''
-comments: false
+comments: true
 icon_class: ''
 published: true
 
