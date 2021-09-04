@@ -16,7 +16,7 @@ icon_class: ''
 published: true
 
 ---
-Supposed you have the follwing JavaScript object and you need to find the key with the highest value - which is `b` in this case.
+Suppose you have the following JavaScript object and you need to find the key with the highest value - which is `b` in this case.
 
 ```javascript
 const numberObj = {
@@ -26,11 +26,11 @@ const numberObj = {
 }
 ```
 
-Here's a quick function to help you do that. The solution is written in TypeScript, so if you are looking for a pure JS solution, just remove the types 😊. 
+Here's a quick function to help you do that. The solution is written in TypeScript, so if you are looking for a pure JS solution, just remove the types 😊.
 
 ```typescript
 function getMaxValueKey(obj: {[key: string]: number}): string {
-  return Object.keys(obj).reduce(function(a, b){ return obj[a] > obj[b] ? a : b });
+  return Object.keys(obj).reduce((a, b) => obj[a] > obj[b] ? a : b);
 }
 
 getMaxValueKey(numberObj) // 'b'
