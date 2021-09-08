@@ -5,7 +5,7 @@ const Footer = props => {
     <footer className="footer py-12 bg-gray-100">
       <div className="container">
         <div className="flex justify-center items-center">
-          <span className="uppercase tracking-wide text-gray-400">
+          <span className="uppercase tracking-wide text-gray-400 text-center">
             ©{new Date().getFullYear()} Michael Movsesov, All Rights Reserved
           </span>
         </div>

@@ -35,7 +35,7 @@ const ArticleCard = ({
               }
             />
           </div>
-          <h1 className="text-xl font-display font-bold pb-2 relative leading-relaxed">
+          <h1 className="text-md lg:text-xl font-display font-bold pb-2 relative leading-relaxed">
             {title}
             {isExternal && (
               <i className="fas fa-external-link-alt text-primary-100 mb-0 text-sm absolute ml-3 mt-1"></i>

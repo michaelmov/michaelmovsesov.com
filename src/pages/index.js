@@ -22,7 +22,7 @@ const IndexPage = ({ data, location }) => {
           siteTitle={siteMetadata.title}
           siteDescription={siteMetadata.description}
         />
-        <div className="container pt-8 grid grid-cols-12 gap-3 mt-10">
+        <div className="container pt-8 grid grid-cols-12 gap-3 mt-10 px-4 lg:px-8">
           <div className="col-span-12 mb-7">
             <h3 className="mm_section-title relative text-gray-400 font-bold tracking-widest">
               Latest

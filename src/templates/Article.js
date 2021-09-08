@@ -121,7 +121,7 @@ const Article = ({ data, pageContext }) => {
                 style={{ backgroundImage: `url(${avatarImage})` }}
               />
             </Link>
-            <div className="w-full lg:w-4/5 m-auto mb-12 flex justify-center lg:justify-start mt-6 lg:mt-0">
+            <div className="w-full lg:w-4/5 m-auto mb-12 flex justify-center mt-6 lg:mt-0">
               <LinkButton to="/">{BACK_BUTTON_TEXT}</LinkButton>
             </div>
             <article
