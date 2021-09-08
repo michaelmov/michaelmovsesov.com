@@ -128,7 +128,7 @@ const Article = ({ data, pageContext }) => {
               id="article-wrapper"
               dangerouslySetInnerHTML={{ __html: article.html }}
             />
-            <div className="w-full lg:w-4/5 m-auto mt-12 flex justify-center lg:justify-start mb-12 lg:mb-0">
+            <div className="w-full lg:w-4/5 m-auto mt-12 flex justify-center mb-12 lg:mb-0">
               <LinkButton to="/">{BACK_BUTTON_TEXT}</LinkButton>
             </div>
           </div>
