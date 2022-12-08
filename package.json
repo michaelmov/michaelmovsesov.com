@@ -7,7 +7,7 @@
   "dependencies": {
     "caniuse-lite": "^1.0.30001436",
     "disqus-react": "^1.1.0",
-    "gatsby": "^2.32.13",
+    "gatsby": "^5.2.0",
     "gatsby-background-image": "^0.8.19",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-google-tagmanager": "^2.11.0",
