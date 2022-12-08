@@ -47,13 +47,13 @@ const HomeHeader = ({ siteTitle, siteDescription }) => (
           >
             <i className="fab fa-codepen mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
           </a>
-          <a
+          {/* <a
             href="https://www.linkedin.com/in/michaelmov"
             target="_blank"
             rel="noopener noreferrer"
           >
             <i className="fab fa-linkedin mr-3 hover:text-secondary-300 transition-colors duration-300 ease-linear" />
-          </a>
+          </a> */}
           <a
             href="mailto:michael.movsesov@gmail.com"
             target="_blank"
