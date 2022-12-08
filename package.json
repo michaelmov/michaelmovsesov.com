@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "caniuse-lite": "^1.0.30001436",
     "disqus-react": "^1.1.0",
     "gatsby": "^2.32.13",
     "gatsby-background-image": "^0.8.19",
@@ -43,9 +44,6 @@
     "postcss-nesting": "^8.0.1",
     "prettier": "^1.19.1",
     "tailwindcss": "^2.2.4"
-  },
-  "resolutions": {
-    "caniuse-lite": "1.0.30000957"
   },
   "keywords": [
     "gatsby"
