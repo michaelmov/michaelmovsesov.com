@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
+import avatarImage from './../../content/assets/img/michael_movsesov_profile.jpg';
 
 const HomeHeader = ({ siteTitle, siteDescription }) => (
   <header className="mm_home-header">

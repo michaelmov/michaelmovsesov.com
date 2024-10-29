@@ -2,7 +2,7 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
+import avatarImage from './../../content/assets/img/michael_movsesov_profile.jpg';
 
 import SEO from '../components/seo';
 

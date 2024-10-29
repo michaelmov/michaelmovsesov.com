@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import { DiscussionEmbed } from 'disqus-react';
-import avatarImage from './../../content/assets/img/michael_movsesov_avatar.jpg';
+import avatarImage from './../../content/assets/img/michael_movsesov_profile.jpg';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
